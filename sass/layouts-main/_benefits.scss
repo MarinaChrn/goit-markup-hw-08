@@ -4,11 +4,33 @@
 
 .benefits-list {
     display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
     gap: 30px;
+    @include mobile {
+        max-width: 450px;
+    }
+    
+    @include table {
+        max-width: 738px;
+    }
+    
+    @include desktop {
+        max-width: 1170px;
+    }
 }
 
 .benefits-list-item {
-    max-width: 270px;
+    width: 100%;
+    height: auto;
+    @include table {
+        @include calc(2, 30px);
+    }
+    
+    @include desktop {
+        @include calc(4, 30px);
+    }
 }
 
 .benefits-list-item::before {
@@ -53,7 +75,11 @@
 .benefits-title {
     @include font(null, 700, 1.14, null);
     text-transform: uppercase;
+    text-align: center;
     margin-bottom: 10px;
+    @include table {
+        text-align: start;
+    }
 }
 
 .benefits-after-title {

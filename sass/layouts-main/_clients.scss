@@ -1,20 +1,48 @@
 .clients-title {
-    @include font(36px, 700, calc(42/36), 0.03em);
-    margin-bottom: 50px;
+    @include font(28px, 700, calc(33/28), 0.03em);
+    margin-bottom: 30px;
     text-align: center;
     color: var(--primary-text-color);
+    @include desktop {
+        @include font(36px, 700, calc(42/36), 0.03em);
+        margin-bottom: 50px;
+    }
+}
+
+.clients-block {
+    @include desktop {
+        max-width: 1170px;
+    }
+    margin: 0 auto;
 }
 
 .clients-list {
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
     gap: 30px;
     width: 100%;
+    @include mobile {
+        max-width: 450px;
+    }
+    @include table {
+        max-width: 738px;
+    }
+    @include desktop {
+        max-width: 1170px;
+    }
 }
 
 .clients-list-item {
-    width: calc((100% - 150px)/6);
+    @include calc(2, 30px);
     height: 92px;
+    @include table {
+        @include calc(3, 30px);
+    }
+    @include desktop {
+        @include calc(6, 30px);
+    }
 }
 
 .clients-list-link {

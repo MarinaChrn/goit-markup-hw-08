@@ -29,7 +29,10 @@
 .catalog-project-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
     gap: 30px;
+    max-width: 450px;
 }
 
 .project-about {
@@ -39,7 +42,7 @@
 }
 
 .project-list-item {
-    width: calc(100% - 60px)/3;
+    width: 100%;
 }
 
 .project-link {
