@@ -45,6 +45,7 @@ img {
   --accent-color: #2196F3;
   --hero-button-hover: #188CE8;
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --gradient: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
 .visualy-hidden {
@@ -319,10 +320,18 @@ body {
 
 .logo {
   font-family: "Raleway", "sans-serif";
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.1666666667;
+  letter-spacing: 0.03;
   color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.1538461538;
+  }
 }
 
 .logo__black {
@@ -333,10 +342,173 @@ body {
   color: var(--white-color);
 }
 
+.mob-menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  padding: 10px 15px 48px 30px;
+}
+.mob-menu > .menu-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+@media screen and (min-width: 480px) {
+  .mob-menu {
+    padding: 10px 15px 48px 40px;
+  }
+}
+
+.menu-close-btn {
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-left: auto;
+  transition: fill var(--transition);
+}
+.menu-close-btn:hover, .menu-close-btn:focus {
+  fill: var(--accent-color);
+}
+
+.menu {
+  margin-bottom: 30px;
+}
+
+.menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu__link {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--black-color);
+  transition: color var(--transition);
+}
+.menu__link:hover, .menu__link:focus {
+  color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .menu__link {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+  }
+}
+
+.menu-contacts {
+  margin-bottom: 64px;
+}
+
+.menu-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-contacts__link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+  transition: color var(--transition);
+}
+.menu-contacts__link:hover, .menu-contacts__link:focus {
+  color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .menu-contacts__link {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+  }
+}
+
+.menu-contacts__tel {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .menu-contacts__tel {
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.1764705882;
+    letter-spacing: 0.02em;
+  }
+}
+
+.menu-soc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+@media screen and (min-width: 480px) {
+  .menu-soc {
+    gap: 10px;
+  }
+}
+
+.menu-soc__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 5px;
+}
+@media screen and (min-width: 480px) {
+  .menu-soc__item:not(:last-child) {
+    padding-right: 10px;
+  }
+}
+
+.menu-soc__link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  position: relative;
+}
+@media screen and (min-width: 480px) {
+  .menu-soc__link {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
+}
+
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
+  margin: 0 auto;
+  width: 100%;
   border-bottom: 1px solid #ECECEC;
+}
+@media screen and (min-width: 480px) {
+  .header {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    width: 738px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    width: 1170px;
+  }
 }
 
 .header-container {
@@ -350,6 +522,7 @@ body {
 
 .header-nav {
   margin-right: auto;
+  display: none;
 }
 
 .header-list {
@@ -387,7 +560,7 @@ body {
 }
 
 .header-contacts-list {
-  display: flex;
+  display: none;
   gap: 50px;
 }
 
@@ -407,6 +580,23 @@ body {
 }
 .contacts-link:hover, .contacts-link:focus {
   color: var(--accent-color);
+}
+
+.header-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  display: block;
+  margin-left: auto;
+  fill: var(--black-color);
+  transition: fill var(--transition);
+}
+.header-btn:hover, .header-btn:focus {
+  fill: var(--accent-color);
 }
 
 .footer {
@@ -547,28 +737,46 @@ body {
 }
 
 .hero {
-  max-width: 480px;
-  height: 400px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mob.jpg);
+  background-image: var(--gradient), url(../images/hero/mob.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gradient), url(../images/hero/mob-2x.jpg);
+  }
+}
+@media screen and (min-width: 480px) {
+  .hero {
+    width: 480px;
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
-    height: 459px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+    width: 768px;
+    background-image: var(--gradient), url(../images/hero/tab.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gradient), url(../images/hero/tab-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    max-width: 1600px;
+    width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    height: 600px;
+    background-image: var(--gradient), url(../images/hero/desk.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gradient), url(../images/hero/desk-2x.jpg);
   }
 }
 
@@ -672,31 +880,51 @@ body {
 }
 
 .icon-antenna::before {
-  background-image: url(../images/antenna.png);
+  background-image: url(../images/benefits/antenna.png);
   background-repeat: no-repeat;
   background-size: 70px 70px;
   background-position: center;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .icon-antenna::before {
+    background-image: url(../images/benefits/antenna-2x.png);
+  }
 }
 
 .icon-clock::before {
-  background-image: url(../images/clock.png);
+  background-image: url(../images/benefits/clock.png);
   background-repeat: no-repeat;
   background-size: 70px 70px;
   background-position: center;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .icon-clock::before {
+    background-image: url(../images/benefits/clock-2x.png);
+  }
 }
 
 .icon-diagram::before {
-  background-image: url(../images/diagram.png);
+  background-image: url(../images/benefits/diagram.png);
   background-repeat: no-repeat;
   background-size: 70px 70px;
   background-position: center;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .icon-diagram::before {
+    background-image: url(../images/benefits/diagram-2x.png);
+  }
+}
 
 .icon-astronaut::before {
-  background-image: url(../images/astronaut.png);
+  background-image: url(../images/benefits/astronaut.png);
   background-repeat: no-repeat;
   background-size: 70px 70px;
   background-position: center;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .icon-astronaut::before {
+    background-image: url(../images/benefits/astronaut-2x.png);
+  }
 }
 
 .benefits-title {
@@ -823,6 +1051,21 @@ body {
 .employee__img {
   width: 100%;
   height: auto;
+}
+@media screen and (min-width: 480px) {
+  .employee__img {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .employee__img {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .employee__img {
+    width: 270px;
+  }
 }
 
 .employee__about {

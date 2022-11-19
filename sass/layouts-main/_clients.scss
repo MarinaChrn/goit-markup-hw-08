@@ -26,7 +26,7 @@
     @include mobile {
         max-width: 450px;
     }
-    @include table {
+    @include tablet {
         max-width: 738px;
     }
     @include desktop {
@@ -37,7 +37,7 @@
 .clients-list-item {
     @include calc(2, 30px);
     height: 92px;
-    @include table {
+    @include tablet {
         @include calc(3, 30px);
     }
     @include desktop {

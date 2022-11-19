@@ -12,7 +12,7 @@
         max-width: 450px;
     }
     
-    @include table {
+    @include tablet {
         max-width: 738px;
     }
     
@@ -24,10 +24,9 @@
 .benefits-list-item {
     width: 100%;
     height: auto;
-    @include table {
+    @include tablet {
         @include calc(2, 30px);
     }
-    
     @include desktop {
         @include calc(4, 30px);
     }
@@ -45,28 +44,40 @@
 }
 
 .icon-antenna::before {
-    background-image: url(../images/antenna.png);
+    background-image: url(../images/benefits/antenna.png);
+    @include retina {
+        background-image: url(../images/benefits/antenna-2x.png);
+    }
     background-repeat: no-repeat;
     background-size: 70px 70px;
     background-position: center;
 }
 
 .icon-clock::before {
-    background-image: url(../images/clock.png);
+    background-image: url(../images/benefits/clock.png);
+    @include retina {
+        background-image: url(../images/benefits/clock-2x.png);
+    }
     background-repeat: no-repeat;
     background-size: 70px 70px;
     background-position: center;
 }
 
 .icon-diagram::before {
-    background-image: url(../images/diagram.png);
+    background-image: url(../images/benefits/diagram.png);
+    @include retina {
+        background-image: url(../images/benefits/diagram-2x.png);
+    }
     background-repeat: no-repeat;
     background-size: 70px 70px;
     background-position: center;
 }
 
 .icon-astronaut::before {
-    background-image: url(../images/astronaut.png);
+    background-image: url(../images/benefits/astronaut.png);
+    @include retina {
+        background-image: url(../images/benefits/astronaut-2x.png);
+    }
     background-repeat: no-repeat;
     background-size: 70px 70px;
     background-position: center;
@@ -77,7 +88,7 @@
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 10px;
-    @include table {
+    @include tablet {
         text-align: start;
     }
 }

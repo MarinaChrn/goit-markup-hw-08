@@ -34,6 +34,41 @@
                         <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                     </svg>+38 096 111 11 11</a></li>
             </ul>
+            <button type="button" class="header-btn" data-menu-open>
+                <svg class="header-menu-open" width="40" height="40">
+                    <use href="./images/symbol-defs.svg#icon-menu"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="mob-menu is-hidden" data-menu>
+            <div class="menu-container">
+                <div class="menu-container__top">
+                    <button type="button" class="menu-close-btn" data-menu-close>
+                        <svg class="menu-close" width="21" height="21">
+                            <use href="./images/symbol-defs.svg#icon-close-icon"></use>
+                        </svg>
+                    </button>
+                    <ul class="menu list">
+                        <li class="menu__item"><a href="./index.html" class="menu__link link">Студія</a></li>
+                        <li class="menu__item"><a href="./portfolio.html" class="menu__link link">Портфоліо</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link link">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="menu-container__bottom">
+                    <ul class="menu-contacts list">
+                        <li class="menu-contacts__item"><a href="tel:+380961111111" class="menu-contacts__link menu-contacts__tel link">
+                                +38 096 111 11 11</a></li>
+                        <li class="menu-contacts__item"><a href="mailto:info@devstudio.com" class="menu-contacts__link link">
+                            info@devstudio.com</a></li>
+                    </ul>
+                    <ul class="menu-soc list">
+                        <li class="menu-soc__item"><a href="" class="menu-soc__link link">Instagram</a></li>
+                        <li class="menu-soc__item"><a href="" class="menu-soc__link link">Twitter</a></li>
+                        <li class="menu-soc__item"><a href="" class="menu-soc__link link">Facebook</a></li>
+                        <li class="menu-soc__item"><a href="" class="menu-soc__link link">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
     <main>
@@ -90,7 +125,29 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="employee list">
                     <li class="employee__item">
-                        <img src="./images/worker1.jpg" alt="Робітник" class="employee__img">
+                        <picture>
+                            <source class="employee__img"
+                                srcset="
+                                    ./images/worker/1-mob.jpg 1x,
+                                    ./images/worker/1-mob-2x.jpg 2x
+                                "
+                            />
+                            <source 
+                                srcset="
+                                    ./images/worker/1-tab.jpg 1x,
+                                    ./images/worker/1-tab-2x.jpg 2x
+                                "
+                                media="(min-width: 768px)"
+                            />
+                            <source 
+                                srcset="
+                                    ./images/worker/1-desk.jpg 1x,
+                                    ./images/worker/1-desk-2x.jpg 2x
+                                "
+                                media="(min-width: 1200px)"
+                            />
+                        </picture>
+                        <img src="./images/worker/1-mob.jpg" alt="Робітник" class="employee__img">
                         <div class="employee__about">
                             <h3 class="employee__name">Ігор Дем'яненко</h3>
                             <p lang="en" class="employee__position">Product Designer</p>
@@ -111,7 +168,23 @@
                         </div>
                     </li>
                     <li class="employee__item">
-                        <img src="./images/worker2.jpg" alt="Робітник" class="employee__img">
+                        <picture>
+                            <source srcset="
+                                ./images/worker/2-mob.jpg 1x,
+                                ./images/worker/2-mob-2x.jpg 2x
+                                " />
+                            <source srcset="
+                                ./images/worker/2-tab.jpg 1x,
+                                ./images/worker/2-tab-2x.jpg 2x
+                                "
+                                media="(min-width: 768px)" />
+                            <source srcset="
+                                ./images/worker/2-desk.jpg 1x,
+                                ./images/worker/2-desk-2x.jpg 2x
+                                " 
+                                media="(min-width: 1200px)" />
+                        </picture>
+                        <img src="./images/worker/2-mob.jpg" alt="Робітник" class="employee__img">
                         <div class="employee__about">
                             <h3 class="employee__name">Ольга Рєпіна</h3>
                             <p lang="en" class="employee__position">Frontend Developer</p>
@@ -132,7 +205,20 @@
                         </div>
                     </li>
                     <li class="employee__item">
-                        <img src="./images/worker3.jpg" alt="Робітник" class="employee__img">
+                        <picture>
+                            <source 
+                            srcset="./images/worker/3-mob.jpg 1x, 
+                            ./images/worker/3-mob-2x.jpg 2" />
+                            <source 
+                            srcset="./images/worker/3-tab.jpg 1x, 
+                            ./images/worker/3-tab-2x.jpg 2x" 
+                            media="(min-width: 768px)" />
+                            <source 
+                            srcset="./images/worker/3-desk.jpg 1x, 
+                            ./images/worker/3-desk-2x.jpg 2x" 
+                            media="(min-width: 1200px)" />
+                        </picture>
+                        <img src="./images/worker/3-mob.jpg" alt="Робітник" class="employee__img">
                         <div class="employee__about">
                             <h3 class="employee__name">Микола Тарасов</h3>
                             <p lang="en" class="employee__position">Marketing</p>
@@ -153,7 +239,20 @@
                         </div>
                     </li>
                     <li class="employee__item">
-                        <img src="./images/worker4.jpg" alt="Робітник" class="employee__img">
+                        <picture>
+                            <source 
+                            srcset="./images/worker/4-mob.jpg 1x, 
+                            ./images/worker/4-mob-2x.jpg 2" />
+                            <source 
+                            srcset="./images/worker/4-tab.jpg 1x, 
+                            ./images/worker/4-tab-2x.jpg 2x" 
+                            media="(min-width: 768px)" />
+                            <source 
+                            srcset="./images/worker/4-desk.jpg 1x, 
+                            ./images/worker/4-desk-2x.jpg 2x" 
+                            media="(min-width: 1200px)" />
+                        </picture>
+                        <img src="./images/worker/4-mob.jpg" alt="Робітник" class="employee__img">
                         <div class="employee__about">
                             <h3 class="employee__name">Михайло Єрмаков</h3>
                             <p lang="en" class="employee__position">UI Designer</p>
@@ -325,5 +424,6 @@
         </div>
     </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mob-menu.js"></script>
 </body>
 </html>

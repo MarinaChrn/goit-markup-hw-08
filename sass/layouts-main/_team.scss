@@ -21,7 +21,7 @@
     @include mobile {
         max-width: 450px;
     }
-    @include table {
+    @include tablet {
         max-width: 738px;
     }
     
@@ -37,7 +37,7 @@
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    @include table {
+    @include tablet {
         @include calc(2, 30px);
     }
     @include desktop {
@@ -48,6 +48,15 @@
 .employee__img {
     width: 100%;
     height: auto;
+    @include mobile {
+        width: 450px;
+    }
+    @include tablet {
+        width: 354px;
+    }
+    @include desktop {
+        width: 270px;
+    }
 }
 
 .employee__about {

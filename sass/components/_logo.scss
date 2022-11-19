@@ -1,8 +1,11 @@
 .logo {
     font-family: 'Raleway',
     'sans-serif';
-    @include font(26px, 700, 1.2, null);
+    @include font(24px, 700, calc(28/24), 0.03);
     color: var(--accent-color);
+    @include desktop {
+        @include font(26px, 700, calc(30/26), null);
+    }
 }
 
 .logo__black {
