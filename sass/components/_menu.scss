@@ -108,7 +108,7 @@
     @include font(14px, 500, 1.2, 0.02em);
     color: var(--accent-color);
     position: relative;
-    @include  mobile {
+    @include mobile {
         @include font(18px, 500, 1.2, 0.02em);
     }
 }

@@ -351,6 +351,8 @@ body {
   position: fixed;
   z-index: 1;
   padding: 10px 15px 48px 30px;
+  transform: scale(1);
+  transition: transform var(--transition);
 }
 .mob-menu > .menu-container {
   height: 100%;
@@ -365,7 +367,10 @@ body {
   }
 }
 
-.menu-close-btn {
+.mob-menu.is-hidden {
+  transform: scale(0);
+}
+.mob-menu.is-hidden .menu-close-btn {
   background-color: transparent;
   border: none;
   width: 40px;
@@ -374,19 +379,16 @@ body {
   margin-left: auto;
   transition: fill var(--transition);
 }
-.menu-close-btn:hover, .menu-close-btn:focus {
+.mob-menu.is-hidden .menu-close-btn:hover, .mob-menu.is-hidden .menu-close-btn:focus {
   fill: var(--accent-color);
 }
-
-.menu {
+.mob-menu.is-hidden .menu {
   margin-bottom: 30px;
 }
-
-.menu__item:not(:last-child) {
+.mob-menu.is-hidden .menu__item:not(:last-child) {
   margin-bottom: 32px;
 }
-
-.menu__link {
+.mob-menu.is-hidden .menu__link {
   font-size: 30px;
   font-weight: 500;
   line-height: 1.18;
@@ -394,27 +396,24 @@ body {
   color: var(--black-color);
   transition: color var(--transition);
 }
-.menu__link:hover, .menu__link:focus {
+.mob-menu.is-hidden .menu__link:hover, .mob-menu.is-hidden .menu__link:focus {
   color: var(--accent-color);
 }
 @media screen and (min-width: 480px) {
-  .menu__link {
+  .mob-menu.is-hidden .menu__link {
     font-size: 40px;
     font-weight: 500;
     line-height: 1.175;
     letter-spacing: 0.02em;
   }
 }
-
-.menu-contacts {
+.mob-menu.is-hidden .menu-contacts {
   margin-bottom: 64px;
 }
-
-.menu-contacts__item:not(:last-child) {
+.mob-menu.is-hidden .menu-contacts__item:not(:last-child) {
   margin-bottom: 32px;
 }
-
-.menu-contacts__link {
+.mob-menu.is-hidden .menu-contacts__link {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.16;
@@ -422,19 +421,18 @@ body {
   color: var(--secondary-text-color);
   transition: color var(--transition);
 }
-.menu-contacts__link:hover, .menu-contacts__link:focus {
+.mob-menu.is-hidden .menu-contacts__link:hover, .mob-menu.is-hidden .menu-contacts__link:focus {
   color: var(--accent-color);
 }
 @media screen and (min-width: 480px) {
-  .menu-contacts__link {
+  .mob-menu.is-hidden .menu-contacts__link {
     font-size: 24px;
     font-weight: 500;
     line-height: 1.16;
     letter-spacing: 0.02em;
   }
 }
-
-.menu-contacts__tel {
+.mob-menu.is-hidden .menu-contacts__tel {
   font-size: 25px;
   font-weight: 500;
   line-height: 1.18;
@@ -442,36 +440,33 @@ body {
   color: var(--accent-color);
 }
 @media screen and (min-width: 480px) {
-  .menu-contacts__tel {
+  .mob-menu.is-hidden .menu-contacts__tel {
     font-size: 34px;
     font-weight: 500;
     line-height: 1.1764705882;
     letter-spacing: 0.02em;
   }
 }
-
-.menu-soc {
+.mob-menu.is-hidden .menu-soc {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
 }
 @media screen and (min-width: 480px) {
-  .menu-soc {
+  .mob-menu.is-hidden .menu-soc {
     gap: 10px;
   }
 }
-
-.menu-soc__item:not(:last-child) {
+.mob-menu.is-hidden .menu-soc__item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   padding-right: 5px;
 }
 @media screen and (min-width: 480px) {
-  .menu-soc__item:not(:last-child) {
+  .mob-menu.is-hidden .menu-soc__item:not(:last-child) {
     padding-right: 10px;
   }
 }
-
-.menu-soc__link {
+.mob-menu.is-hidden .menu-soc__link {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2;
@@ -480,7 +475,7 @@ body {
   position: relative;
 }
 @media screen and (min-width: 480px) {
-  .menu-soc__link {
+  .mob-menu.is-hidden .menu-soc__link {
     font-size: 18px;
     font-weight: 500;
     line-height: 1.2;
