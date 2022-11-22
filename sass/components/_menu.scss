@@ -23,6 +23,7 @@
 
 .mob-menu.is-hidden {
     transform: scale(0);
+}
 
 .menu-close-btn {
     background-color: transparent;
@@ -70,10 +71,12 @@
     @include font(18px, 500, 1.16, 0.02em);
     color: var(--secondary-text-color);
     transition: color var(--transition);
+
     &:hover,
     &:focus {
         color: var(--accent-color)
     }
+
     @include mobile {
         @include font(24px, 500, 1.16, 0.02em);
     }
@@ -82,6 +85,7 @@
 .menu-contacts__tel {
     @include font(25px, 500, 1.18, 0.02em);
     color: var(--accent-color);
+
     @include mobile {
         @include font(34px, 500, calc(40/34), 0.02em);
     }
@@ -91,6 +95,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+
     @include mobile {
         gap: 10px;
     }
@@ -99,6 +104,7 @@
 .menu-soc__item:not(:last-child) {
     border-right: 1px solid rgba(33, 33, 33, 0.2);
     padding-right: 5px;
+
     @include mobile {
         padding-right: 10px;
     }
@@ -108,6 +114,7 @@
     @include font(14px, 500, 1.2, 0.02em);
     color: var(--accent-color);
     position: relative;
+
     @include mobile {
         @include font(18px, 500, 1.2, 0.02em);
     }
