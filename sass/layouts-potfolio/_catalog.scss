@@ -40,14 +40,8 @@
     justify-content: center;
     margin: 0 auto;
     gap: 30px;
-    max-width: 450px;
+    max-width: 1170px;
     justify-content: flex-start;
-    @include tablet {
-        max-width: 738px;
-    }
-    @include desktop {
-        max-width: 1170px;
-    }
 }
 
 .project-about {
@@ -61,13 +55,7 @@
 }
 
 .project-list-item {
-    width: 100%;
-    @include tablet {
-        @include calc(2, 30px);
-    }
-    @include desktop {
-        @include calc(3, 30px);
-    }
+    @include calc(3, 30px);
 }
 
 .project-link {

@@ -8,19 +8,27 @@
 }
 
 .modal {
-    width: 528px;
-    min-height: 581px;
+    width: calc(100% - 30px);
     background-color: var(--white-color);
     position: absolute;
     top: 50%;
     left: 50%;
-    padding: 40px;
+    padding: 40px 10px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--transition);
+    @include mobile {
+        width: 405px;
+        min-height: 609px;
+        padding: 40px;
+    }
+    @include desktop {
+        width: 528px;
+        min-height: 581px;
+    }
 }
 
 .backdrop.is-hidden .modal {
@@ -53,10 +61,13 @@
 }
 
 .modal-title {
-    @include font(20px, 700, calc(23/20), 0.03em);
+    @include font(17px, 700, calc(23/20), 0.03em);
     text-align: center;
     color: var(--primary-text-color);
     margin-bottom: 12px;
+    @include mobile {
+        @include font(20px, 700, calc(23/20), 0.03em);
+    }
 }
 
 .modal-field {
@@ -122,10 +133,17 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-top: 25px;
-    @include font(14px, null, 1.71, 0.03em);
     color: var(--secondary-text-color);
-
+    @include font(9px, null, 1.7, 0.01em);
+    @include mobile {
+        width: 346px;
+        margin-left: -10px;
+        @include font(11px, null, 1.7, 0.03em);
+    } 
+    @include desktop {
+        width: 100%;
+        @include font(14px, null, 1.71, 0.03em);
+    }
 }
 
 .check-text span {
@@ -160,7 +178,7 @@
 }
 
 .modal-btn {
-    @include font(16px, 700, 1.88, 0.06em);
+    @include font(14px, 700, 1.88, 0.06em);
     display: flex;
     align-items: center;
     text-align: center;
@@ -176,5 +194,8 @@
     &:hover {
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         background-color: var(--hero-button-hover);
+    }
+    @include mobile {
+        @include font(16px, 700, 1.88, 0.06em);
     }
 }

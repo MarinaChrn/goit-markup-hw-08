@@ -1,11 +1,14 @@
 .work {
-    display: block;
-    padding-bottom: 94px;
+    display: none;
+    @include desktop {
+        display: block;
+        padding-bottom: 94px;
+    }
 }
 
 .work__container {
     text-align: center;
-
+    
 }
 
 .work__title {
@@ -14,8 +17,11 @@
 }
 
 .process {
+    justify-content: center;
+    align-items: center;
     display: flex;
     gap: 30px;
+    margin: 0 auto;
 }
 
 .process__item {
