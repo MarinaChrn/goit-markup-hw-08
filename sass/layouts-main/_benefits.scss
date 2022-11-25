@@ -84,7 +84,7 @@
 }
 
 .benefits-title {
-    @include font(null, 700, 1.14, null);
+    @include font(14px, 700, 1.14, null);
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 10px;

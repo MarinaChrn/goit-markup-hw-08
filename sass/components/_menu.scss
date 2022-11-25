@@ -59,6 +59,10 @@
     }
 }
 
+.menu__active {
+    color: var(--accent-color);
+}
+
 .menu-contacts {
     margin-bottom: 64px;
 }

@@ -22,11 +22,10 @@
         max-width: 604px;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: flex-start;
+        align-items: baseline;
     }
     @include desktop {
         max-width: 1170px;
-        align-items: baseline;
     }
 }
 
