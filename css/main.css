@@ -1439,18 +1439,25 @@ body {
 }
 @media screen and (min-width: 480px) {
   .catalog {
-    max-width: 450px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .catalog {
-    max-width: 738px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .catalog {
-    max-width: 1170px;
+    max-width: 1200px;
   }
+}
+
+.catalog-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .catalog-list {

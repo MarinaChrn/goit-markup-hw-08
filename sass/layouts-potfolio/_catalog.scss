@@ -2,14 +2,21 @@
     width: 100%;
     margin: 0 auto;
     @include mobile {
-        max-width: 450px;
+        max-width: 480px;
     }
     @include tablet {
-        max-width: 738px;
+        max-width: 768px;
     }
     @include desktop {
-        max-width: 1170px;
+        max-width: 1200px;
     }
+}
+
+.catalog-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .catalog-list {
