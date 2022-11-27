@@ -1,13 +1,29 @@
+.catalog {
+    width: 100%;
+    margin: 0 auto;
+    @include mobile {
+        max-width: 450px;
+    }
+    @include tablet {
+        max-width: 738px;
+    }
+    @include desktop {
+        max-width: 1170px;
+    }
+}
+
 .catalog-list {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
     gap: 8px;
-    margin: 0 auto;
+    margin-right: auto;
     margin-bottom: 50px;
     @include tablet {
+        margin: 0 auto;
+        margin-bottom: 50px;
         justify-content: center;
         max-width: 1170px;
     }
@@ -16,11 +32,11 @@
 .catalog-list-btn {
     font-family: inherit;
     text-align: center;
-    @include font(16px, 500, 1.62, 0.03em);
+    @include font(14px, 500, 1.62, 0.03em);
     background-color: var(--background-our-team);
     border-radius: 4px;
     border: none;
-    padding: 6px 22px;
+    padding: 5px 20px;
     transition: color var(--transition), 
     background-color var(--transition), 
     box-shadow var(--transition);
@@ -32,36 +48,53 @@
             0px 1px 2px rgba(0, 0, 0, 0.08),
             0px 2px 2px rgba(0, 0, 0, 0.12);
     }
+    @include mobile {
+        @include font(16px, 500, 1.62, 0.03em);
+        padding: 6px 22px;
+    }
 }
 
 .catalog-project-list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
+    flex-wrap: wrap;
     gap: 30px;
-    max-width: 1170px;
-    justify-content: flex-start;
+    max-width: 450px;
+    @include tablet {
+        max-width: 738px;
+        justify-content: flex-start;
+    }
+    @include desktop {
+        max-width: 1170px;
+    }
 }
 
 .project-about {
     padding: 20px 24px;
     border: 1px solid #EEEEEE;
     border-top: none;
-}
-
-.project-about-align {
-    padding-bottom: 56px;
+    flex-grow: 1;
 }
 
 .project-list-item {
-    @include calc(3, 30px);
+    width: 450px;
+    @include tablet {
+        @include calc(2, 30px);
+    }
+    @include desktop {
+        @include calc(3, 30px);
+    }
 }
 
 .project-link {
     width: 100%;
+    height: 100%;
     display: block;
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
+    width: 100%;
     transition: box-shadow var(--transition);
     &:hover,
     &:focus {
@@ -94,7 +127,16 @@
 
 .project-img {
     width: 100%;
-    height: 294px;
+    height: auto;
+    @include mobile {
+        width: 450px;
+    }
+    @include tablet {
+        width: 354px;
+    }
+    @include desktop {
+        width: 370px;
+    }
 }
 
 .project-top-text {
@@ -108,4 +150,5 @@
     transform: translateY(100%);
     transition: transform var(--transition);
     overflow: auto;
+
 }

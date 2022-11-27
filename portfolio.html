@@ -20,8 +20,8 @@
             <a class="logo-web logo link" href="./index.html">Web<span class="logo__black">Studio</span></a>
             <nav class="header-nav">
                 <ul class="header-list list">
-                    <li class="header-list-item"><a href="./index.html" class="header-link link">Студія</a></li>
-                    <li class="header-list-item"><a href="./portfolio.html" class="header-link nav-active link">Портфоліо</a></li>
+                    <li class="header-list-item"><a href="./index.html" class="header-link nav-active link">Студія</a></li>
+                    <li class="header-list-item"><a href="./portfolio.html" class="header-link link">Портфоліо</a></li>
                     <li class="header-list-item"><a href="#" class="header-link link">Контакти</a></li>
                 </ul>
             </nav>
@@ -35,6 +35,43 @@
                             <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                         </svg>+38 096 111 11 11</a></li>
             </ul>
+            <button type="button" class="header-btn" data-menu-open>
+                <svg class="header-menu-open" width="40" height="40">
+                    <use href="./images/symbol-defs.svg#icon-menu"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="mob-menu is-hidden" data-menu>
+            <div class="menu-container">
+                <div class="menu-container__top">
+                    <button type="button" class="menu-close-btn" data-menu-close>
+                        <svg class="menu-close" width="21" height="21">
+                            <use href="./images/symbol-defs.svg#icon-close-icon"></use>
+                        </svg>
+                    </button>
+                    <ul class="menu list">
+                        <li class="menu__item"><a href="./index.html" class="menu__link menu__active link">Студія</a></li>
+                        <li class="menu__item"><a href="./portfolio.html" class="menu__link link">Портфоліо</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link link">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="menu-container__bottom">
+                    <ul class="menu-contacts list">
+                        <li class="menu-contacts__item"><a href="tel:+380961111111"
+                                class="menu-contacts__link menu-contacts__tel link">
+                                +38 096 111 11 11</a></li>
+                        <li class="menu-contacts__item"><a href="mailto:info@devstudio.com"
+                                class="menu-contacts__link link">
+                                info@devstudio.com</a></li>
+                    </ul>
+                    <ul class="menu-soc list">
+                        <li class="menu-soc__item"><a href="" class="menu-soc__link link">Instagram</a></li>
+                        <li class="menu-soc__item"><a href="" class="menu-soc__link link">Twitter</a></li>
+                        <li class="menu-soc__item"><a href="" class="menu-soc__link link">Facebook</a></li>
+                        <li class="menu-soc__item"><a href="" class="menu-soc__link link">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
     <main>
@@ -52,11 +89,19 @@
                     <li class="project-list-item">
                         <a href="" class="project-link">
                             <div class="project-top-wrap">
-                                <img src="./images/project1.jpg" alt="Проєкт" class="project-img">
+                                <picture>
+                                    <source srcset="./images/project/1-mob-1x.jpg 1x, 
+                                                            ./images/project/1-mob-2x.jpg 2" />
+                                    <source srcset="./images/project/1-tab-1x.jpg 1x, 
+                                                            ./images/project/1-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/project/1-desk-1x.jpg 1x, 
+                                                            ./images/project/1-desk-2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <img src="./images/project/1-mob-1x.jpg" alt="Проєкт" class="project-img">
+                                </picture>
                                 <p class="project-top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
-                            <div class="project-about project-about-align">
+                            <div class="project-about">
                                 <h3 class="project-title">Технокряк</h3>
                                 <p class="project-after-title">Веб-сайт</p>
                             </div>
@@ -65,7 +110,14 @@
                     <li class="project-list-item">
                         <a href="" class="project-link">
                             <div class="project-top-wrap">
-                                <img src="./images/project2.jpg" alt="Проєкт" class="project-img">
+                                <picture>
+                                    <source srcset="./images/project/2-mob-1x.jpg 1x, ./images/project/2-mob-2x.jpg 2" />
+                                    <source srcset="./images/project/2-tab-1x.jpg 1x, ./images/project/2-tab-2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+                                    <source srcset="./images/project/2-desk-1x.jpg 1x, ./images/project/2-desk-2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+                                    <img src="./images/project/2-mob-1x.jpg" alt="Проєкт" class="project-img">
+                                </picture>
                                 <p class="project-top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -78,7 +130,12 @@
                     <li class="project-list-item">
                         <a href="" class="project-link">
                             <div class="project-top-wrap">
-                                <img src="./images/project3.jpg" alt="Проєкт" class="project-img">
+                                <picture>
+                                    <source srcset="./images/project/3-mob-1x.jpg 1x, ./images/project/3-mob-2x.jpg 2" />
+                                    <source srcset="./images/project/3-tab-1x.jpg 1x, ./images/project/3-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/project/3-desk-1x.jpg 1x, ./images/project/3-desk-2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <img src="./images/project/3-mob-1x.jpg" alt="Проєкт" class="project-img">
+                                </picture>
                                 <p class="project-top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -91,7 +148,12 @@
                     <li class="project-list-item">
                         <a href="" class="project-link">
                             <div class="project-top-wrap">
-                                <img src="./images/project4.jpg" alt="Проєкт" class="project-img">
+                                <picture>
+                                    <source srcset="./images/project/4-mob-1x.jpg 1x, ./images/project/4-mob-2x.jpg 2" />
+                                    <source srcset="./images/project/4-tab-1x.jpg 1x, ./images/project/4-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/project/4-desk-1x.jpg 1x, ./images/project/4-desk-2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <img src="./images/project/4-mob-1x.jpg" alt="Проєкт" class="project-img">
+                                </picture>
                                 <p class="project-top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -104,7 +166,12 @@
                     <li class="project-list-item">
                         <a href="" class="project-link">
                             <div class="project-top-wrap">
-                                <img src="./images/project5.jpg" alt="Проєкт" class="project-img">
+                                <picture>
+                                    <source srcset="./images/project/5-mob-1x.jpg 1x, ./images/project/5-mob-2x.jpg 2" />
+                                    <source srcset="./images/project/5-tab-1x.jpg 1x, ./images/project/5-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/project/5-desk-1x.jpg 1x, ./images/project/5-desk-2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <img src="./images/project/5-mob-1x.jpg" alt="Проєкт" class="project-img">
+                                </picture>
                                 <p class="project-top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -117,7 +184,12 @@
                     <li class="project-list-item">
                         <a href="" class="project-link">
                             <div class="project-top-wrap">
-                                <img src="./images/project6.jpg" alt="Проєкт" class="project-img">
+                                <picture>
+                                    <source srcset="./images/project/6-mob-1x.jpg 1x, ./images/project/6-mob-2x.jpg 2" />
+                                    <source srcset="./images/project/6-tab-1x.jpg 1x, ./images/project/6-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/project/6-desk-1x.jpg 1x, ./images/project/6-desk-2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <img src="./images/project/6-mob-1x.jpg" alt="Проєкт" class="project-img">
+                                </picture>
                                 <p class="project-top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -130,7 +202,12 @@
                     <li class="project-list-item">
                         <a href="" class="project-link">
                             <div class="project-top-wrap">
-                                <img src="./images/project7.jpg" alt="Проєкт" class="project-img">
+                                <picture>
+                                    <source srcset="./images/project/7-mob-1x.jpg 1x, ./images/project/7-mob-2x.jpg 2" />
+                                    <source srcset="./images/project/7-tab-1x.jpg 1x, ./images/project/7-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/project/7-desk-1x.jpg 1x, ./images/project/7-desk-2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <img src="./images/project/7-mob-1x.jpg" alt="Проєкт" class="project-img">
+                                </picture>
                                 <p class="project-top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -143,7 +220,12 @@
                     <li class="project-list-item">
                         <a href="" class="project-link">
                             <div class="project-top-wrap">
-                                <img src="./images/project8.jpg" alt="Проєкт" class="project-img">
+                                <picture>
+                                    <source srcset="./images/project/8-mob-1x.jpg 1x, ./images/project/8-mob-2x.jpg 2" />
+                                    <source srcset="./images/project/8-tab-1x.jpg 1x, ./images/project/8-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/project/8-desk-1x.jpg 1x, ./images/project/8-desk-2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <img src="./images/project/8-mob-1x.jpg" alt="Проєкт" class="project-img">
+                                </picture>
                                 <p class="project-top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -156,7 +238,12 @@
                     <li class="project-list-item">
                         <a href="" class="project-link">
                             <div class="project-top-wrap">
-                                <img src="./images/project9.jpg" alt="Проєкт" class="project-img">
+                                <picture>
+                                    <source srcset="./images/project/9-mob-1x.jpg 1x, ./images/project/9-mob-2x.jpg 2" />
+                                    <source srcset="./images/project/9-tab-1x.jpg 1x, ./images/project/9-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/project/9-desk-1x.jpg 1x, ./images/project/9-desk-2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <img src="./images/project/9-mob-1x.jpg" alt="Проєкт" class="project-img">
+                                </picture>
                                 <p class="project-top-text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -170,8 +257,8 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="container footer__container">
+    <footer class="footer container">
+        <div class="footer__container">
             <div class="contacts">
                 <a class="contacts__logo logo link" href="./index.html">Web<span class="logo__white">Studio</span></a>
                 <address class="address">
@@ -219,5 +306,6 @@
             </div>
         </div>
     </footer>
+    <script src="./js/mob-menu.js"></script>
 </body>
 </html>
