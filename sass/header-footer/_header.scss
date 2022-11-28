@@ -1,36 +1,30 @@
 .header {
-    padding-top: 16px;
-    padding-bottom: 16px;
     margin: 0 auto;
     width: 100%;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.header-container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     @include mobile {
         width: 450px;
     }
-    
     @include tablet {
         width: 738px;
         padding-top: 26px;
         padding-bottom: 26px;
         width: 738px;
     }
-    
     @include desktop {
         width: 1170px;
         padding-top: 24px;
         padding-bottom: 25px;
-        margin: 0 auto;
-    }
-    border-bottom: 1px solid #ECECEC;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    @include desktop {
-        width: 100%;
-        padding: 0;
         justify-content: center;
+        margin: 0 auto;
     }
 }
 
